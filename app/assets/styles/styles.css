@@ -1,2 +1,11 @@
-@import "modules/_static-element.css";
-/*@import "global/_global.css";*/
+@import "global/_variables.css";
+@import "global/_global.css";
+@import "global/_mixins.css";
+@import "modules/_static-letters.css";
+@import "modules/_site-home.css";
+@import "modules/_site-about.css";
+@import "modules/_site-experience.css";
+@import "modules/_site-education.css";
+@import "modules/_site-skills.css";
+@import "modules/_page-header.css";
+@import "modules/_banner-animated.css";

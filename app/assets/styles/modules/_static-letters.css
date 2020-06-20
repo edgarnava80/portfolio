@@ -1,0 +1,17 @@
+.static-letters{
+  font-family: $font-big;
+  font-size: 5rem;
+  text-transform: uppercase;
+  position: fixed;
+
+  &__e{
+    color: $color-two-dark;
+    top: 0;
+    left: 1%;
+  }
+  &__n{
+    color: $color-one-dark;
+    bottom: 0;
+    right: 5px;
+  }
+}

@@ -1,0 +1,75 @@
+.site-about {
+    height: 100vh;
+    position: relative;
+    &__pic {
+        width: 40rem;
+        height: 40rem;
+        position: absolute;
+        top: 0%;
+        left: calc(50% - 20rem);
+        //background-color: red;
+        background-image: url('./assets/images/edgar.png');
+        background-position: center 20rem;
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        margin-top: 10rem;
+        //border-radius: 50%;
+        transition: all 0.2s ease;
+        @mixin atSmall {
+            width: 40rem;
+            height: 40rem;
+            left: calc(50% - 20rem);
+            background-position: center 10rem;
+            background-repeat: no-repeat;
+        }
+        &--tint {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            &__text {
+                position: absolute;
+                width: 38rem;
+                height: 30rem;
+                top: 15rem;
+                left: calc(50% - 19rem);
+                color: $color-white;
+                font-size: 3rem;
+                font-weight: 300;
+                text-align: center;
+                opacity: 0;
+            }
+        }
+    }
+    &__text {
+        border: 1px solid red;
+        width: 60rem;
+        position: absolute;
+        top: 85%;
+        left: calc(50% - 30rem);
+        text-align: center;
+        font-size: 5rem;
+        @mixin atSmall {
+            top: 85%;
+            width: 60rem;
+            left: calc(50% - 30rem);
+            font-size: 2rem;
+        }
+        @mixin atMedium {
+            top: 85%;
+            width: 60rem;
+            left: calc(50% - 30rem);
+            font-size: 2rem;
+        }
+        @mixin atLarge {
+            top: 85%;
+            width: 60rem;
+            left: calc(50% - 30rem);
+            font-size: 2rem;
+        }
+    }
+}
