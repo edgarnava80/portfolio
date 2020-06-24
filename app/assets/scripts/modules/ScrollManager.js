@@ -28,8 +28,9 @@ class ScrollManager {
     runOnScroll() {
         this.defineScrollDirection()
             //Methods to execute on scroll defined for each particular website
-        this.actionsHome()
-        if (this.getCurrentTop() > .5) this.actionsAbout()
+        if (this.getCurrentTop() < 1.1) this.actionsHome()
+        if (this.getCurrentTop() > .5 && this.getCurrentTop() < 2.5) this.actionsAbout()
+        if (this.getCurrentTop() > 1.5 && this.getCurrentTop() < 3.5) this.actionsExperience()
 
     }
 
@@ -44,33 +45,73 @@ class ScrollManager {
         //METHODS DEFINED FOR EACH PARTICULAR WEBSITE
         // Method to trigger the actions on page home
     actionsHome() {
-            this.getCurrentTop() < 1 ? this.mainTitle.style.opacity = '0' : this.mainTitle.style.opacity = '1'
+            //console.log('actions home: ' + this.getCurrentTop())
+            this.getCurrentTop() < 1 ? this.mainTitle.classList.remove('is-shown') : this.mainTitle.classList.add('is-shown')
         }
         // Method to trigger the actions on page about
     actionsAbout() {
-            const text = document.querySelector('.site-about__text')
-            let opacity = (this.getCurrentTop() * 2 - 1.2)
-                //console.log('scrolled: ' + this.getCurrentTop())
-            if (this.getCurrentTop() >= 1.5) {
-                text.style.opacity = 1;
-            }
-            if (this.getCurrentTop() <= 1) {
-                text.style.opacity = 0;
-            }
-            /*if(this.scrollDirection === 'down' && this.getCurrentTop() >= 1.1){
-              tint.style.backgroundColor = 'rgba(0,0,0,1)';
-            }
-            if(this.scrollDirection === 'up' && this.getCurrentTop() <= 1.11){
-              tint.style.backgroundColor = 'rgba(0,0,0,0.5)';
-            }*/
+        const text = document.querySelector('.site-about__text')
+        let opacity = (this.getCurrentTop() * 2 - 1.2)
+            // Set tilte text to "about"
+        if (this.scrollDirection == 'down' && this.getCurrentTop() == 1.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 1.80) {
+            this.mainTitle.classList.remove('odd-style')
+            this.mainTitleText.textContent = 'about'
+        }
+        if (this.getCurrentTop() >= 1.5) {
+            //text.style.opacity = 1;
+        }
+        if (this.getCurrentTop() <= 1) {
+            //text.style.opacity = 0;
+        }
+        /*if(this.scrollDirection === 'down' && this.getCurrentTop() >= 1.1){
+          tint.style.backgroundColor = 'rgba(0,0,0,1)';
+        }
+        if(this.scrollDirection === 'up' && this.getCurrentTop() <= 1.11){
+          tint.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        }*/
 
 
-            /*const mainTitleP1 = document.querySelector('.site-home__title')
-            const mainSubtitleP1 = document.querySelector('.site-home__subtitle')
-            mainTitleP1.style.opacity = (1 - this.scrolledVertically / 1000 * 1.5).toFixed(2)
-            mainSubtitleP1.style.opacity = (1 - this.scrolledVertically / 1000 * 1.7).toFixed(2)
-            mainSubtitleP1.style.transform = 'translate(0px,' + this.scrolledVertically / 2.5 + 'px)'
-            mainTitleP1.style.transform = 'translate(0px,' + this.scrolledVertically / 1.8 + 'px)'*/
+        /*const mainTitleP1 = document.querySelector('.site-home__title')
+        const mainSubtitleP1 = document.querySelector('.site-home__subtitle')
+        mainTitleP1.style.opacity = (1 - this.scrolledVertically / 1000 * 1.5).toFixed(2)
+        mainSubtitleP1.style.opacity = (1 - this.scrolledVertically / 1000 * 1.7).toFixed(2)
+        mainSubtitleP1.style.transform = 'translate(0px,' + this.scrolledVertically / 2.5 + 'px)'
+        mainTitleP1.style.transform = 'translate(0px,' + this.scrolledVertically / 1.8 + 'px)'*/
+    }
+    actionsExperience() {
+        // Set tilte text to "experience" and add class 'odd-style'
+        if (this.scrollDirection == 'down' && this.getCurrentTop() == 2.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 2.80) {
+            this.mainTitle.classList.add('odd-style')
+            this.mainTitleText.textContent = 'experience'
+        }
+    }
+    actionsEducation() {
+        // Set tilte text to "education" and remove class 'odd-style'
+        if (this.scrollDirection == 'down' && this.getCurrentTop() == 3.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 3.80) {
+            this.mainTitle.classList.remove('odd-style')
+            this.mainTitleText.textContent = 'education'
+        }
+    }
+    actionsSkills() {
+        // Set tilte text to "skills" and add class 'odd-style'
+        if (this.scrollDirection == 'down' && this.getCurrentTop() == 4.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 4.80) {
+            this.mainTitle.classList.add('odd-style')
+            this.mainTitleText.textContent = 'skills'
+        }
+    }
+    actionsProjects() {
+        // Set tilte text to "projects" and remove class 'odd-style'
+        if (this.scrollDirection == 'down' && this.getCurrentTop() == 5.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 5.80) {
+            this.mainTitle.classList.remove('odd-style')
+            this.mainTitleText.textContent = 'projects'
+        }
+    }
+    actionsContact() {
+            // Set tilte text to "contact" and add class 'odd-style'
+            if (this.scrollDirection == 'down' && this.getCurrentTop() == 6.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 6.80) {
+                this.mainTitle.classList.add('odd-style')
+                this.mainTitleText.textContent = 'contact'
+            }
         }
         // Method to trigger the actions on page 2
     actionsP2() {

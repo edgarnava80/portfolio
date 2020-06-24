@@ -1,75 +1,45 @@
 .site-about {
-    height: 100vh;
+    height: 150vh;
     position: relative;
     &__pic {
-        width: 40rem;
-        height: 40rem;
+        width: 100%;
+        height: 100vh;
         position: absolute;
-        top: 0%;
-        left: calc(50% - 20rem);
-        //background-color: red;
+        top: 0;
+        left: 0;
         background-image: url('./assets/images/edgar.png');
-        background-position: center 20rem;
-        background-repeat: repeat-y;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-attachment: fixed;
-        margin-top: 10rem;
-        //border-radius: 50%;
-        transition: all 0.2s ease;
         @mixin atSmall {
-            width: 40rem;
-            height: 40rem;
-            left: calc(50% - 20rem);
-            background-position: center 10rem;
-            background-repeat: no-repeat;
-        }
-        &--tint {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            &__text {
-                position: absolute;
-                width: 38rem;
-                height: 30rem;
-                top: 15rem;
-                left: calc(50% - 19rem);
-                color: $color-white;
-                font-size: 3rem;
-                font-weight: 300;
-                text-align: center;
-                opacity: 0;
-            }
+            background-position: center 3rem;
         }
     }
     &__text {
         border: 1px solid red;
-        width: 60rem;
+        width: 100%;
+        height: 50vh;
         position: absolute;
-        top: 85%;
-        left: calc(50% - 30rem);
+        top: 100vh;
         text-align: center;
+        background-color: rgba(0, 0, 0, .8);
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: 5rem;
         @mixin atSmall {
-            top: 85%;
-            width: 60rem;
-            left: calc(50% - 30rem);
             font-size: 2rem;
         }
         @mixin atMedium {
-            top: 85%;
-            width: 60rem;
-            left: calc(50% - 30rem);
             font-size: 2rem;
         }
         @mixin atLarge {
-            top: 85%;
-            width: 60rem;
-            left: calc(50% - 30rem);
             font-size: 2rem;
+        }
+        &__intro {
+            margin-bottom: 4rem;
         }
     }
 }

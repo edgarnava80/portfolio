@@ -1,20 +1,19 @@
-.site-home{
-  height: 110vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  &__big-title{
-    font-family: $font-big;
-    font-size: 3rem;
-    color: $color-grey;
-    text-transform: capitalize;
-    margin-bottom: 4rem;
-  }
-  &__subtitle{
-    font-size: 2rem;
-    color: $color-black;
-  }
-
+.site-home {
+    height: 110vh;
+    animation: backgroundImageHome 1s ease 1s forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__big-title {
+        font-family: $font-big;
+        font-size: 3rem;
+        color: $color-grey;
+        text-transform: capitalize;
+        margin-bottom: 4rem;
+    }
+    &__subtitle {
+        font-size: 2rem;
+        color: $color-black;
+    }
 }
