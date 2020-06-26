@@ -1,8 +1,5 @@
 @keyframes backgroundImageHome {
-    0% {
-        background-image: linear-gradient(rgba($color-white, .9), rgba($color-white, .9)), url('./assets/images/background-image.jpeg');
-    }
     100% {
-        background-image: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9)), url('./asstes/images/background-image.jpeg');
+        background-image: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9));
     }
 }

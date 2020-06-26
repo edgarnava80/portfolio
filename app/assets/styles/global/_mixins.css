@@ -21,6 +21,19 @@
         @mixin-content;
     }
 }
+
+@define-mixin min169 {
+    @media (min-aspect-ratio: 16/9) {
+        @mixin-content;
+    }
+}
+
+@define-mixin max169 {
+    @media (max-aspect-ratio: 16/9) {
+        @mixin-content;
+    }
+}
+
 @define-mixin center {
     position: absolute;
     top: 50%;

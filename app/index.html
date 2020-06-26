@@ -8,6 +8,9 @@
 
 <body>
     <div class="page-header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
         <h1 class="page-header__text"></h1>
     </div>
     <div class="static-letters static-letters__e">
@@ -29,72 +32,146 @@
 
         </div>
         <div class="site-about__text">
-            <h3 class="site-about__text__intro">Software development enthusiat with great passion for coding!</h3>
+            <video id="video_about" autoplay muted loop>
+                        <source src="./assets/images/video-about.mp4" type="video/mp4">
+                    </video>
+            <h2 class="site-about__text__intro">Software development enthusiat with great passion for coding!</h2>
             <p class="site-about__text__brief">More than 6 years of experience working in the construction of software tools in organizations.</p>
         </div>
+
     </section>
     <section class="site-experience" matching-link="#experience-link">
         <div class="site-experience__timeline">
             <div class="site-experience__container site-experience--left">
                 <div class="site-experience__content baz">
-                    <h2>January 2005 to July 2006</h2>
+                    <h3>January 2005 to July 2006</h3>
                     <h2>Software Developer </h2>
-                    <p>Conceived, planned, developed and delivered the bank’s Customer Relationship Management (CRM)requested by the Sales Division. Developed a solution to integrate big amounts of transactional information from different sources and technologies
+                    <!--<p>Conceived, planned, developed and delivered the bank’s Customer Relationship Management (CRM)requested by the Sales Division. Developed a solution to integrate big amounts of transactional information from different sources and technologies
                         (SQL Server, AS400 and Oracle) into one single tool developed in Java back-end and PHP front-end. Extensive use of XML queries to handle large amounts of data. Analyzed, defined, negotiated and purchased the required hardware for
-                        the CRM software to be deployed in more than 110 branches of the bank.</p>
+                        the CRM software to be deployed in more than 110 branches of the bank.</p>-->
                 </div>
             </div>
             <div class="site-experience__container site-experience--right">
                 <div class="site-experience__content invex">
-                    <h2>August 2006 to December 2007</h2>
+                    <h3>August 2006 to December 2007</h3>
                     <h2>Risk Models Analyst </h2>
-                    <p>Developed a real time reports system in Jasper Reports that replaced the previous one build in MS Excell. Developed a solution to integrate big amounts of transactional information from different sources and technologies (SQL Server,
-                        txt, and Oracle) into one single tool.</p>
+                    <!--<p>Developed a real time reports system in Jasper Reports that replaced the previous one build in MS Excell. Developed a solution to integrate big amounts of transactional information from different sources and technologies (SQL Server,
+                        txt, and Oracle) into one single tool.</p>-->
                 </div>
             </div>
             <div class="site-experience__container site-experience--left">
                 <div class="site-experience__content cco">
-                    <h2>January 2010 to July 2016</h2>
+                    <h3>January 2010 to July 2016</h3>
                     <h2>Grains Trader </h2>
-                    <p>Managed the export and domestic sales of White Corn and Durum Wheat. Increased customer base and retention of current clients. Developed price creation and detailed costing models. Worked side to side with the commercial team on the
-                        planning and execution of the logistics. </p>
+                    <!--<p>Managed the export and domestic sales of White Corn and Durum Wheat. Increased customer base and retention of current clients. Developed price creation and detailed costing models. Worked side to side with the commercial team on the
+                        planning and execution of the logistics. </p>-->
                 </div>
             </div>
             <div class="site-experience__container site-experience--right">
                 <div class="site-experience__content aor">
-                    <h2>August 2016 to September 2018</h2>
+                    <h3>August 2016 to September 2018</h3>
                     <h2>Computer Systems Analyst </h2>
-                    <p>Developed a Customer Relationship Management (CRM) in-house solution to help traders to manage the sale process from planning to closing. This software was developed in HTML-CSS(SASS)-JavaScript in the front end and NodeJS-MySQL int
+                    <!--<p>Developed a Customer Relationship Management (CRM) in-house solution to help traders to manage the sale process from planning to closing. This software was developed in HTML-CSS(SASS)-JavaScript in the front end and NodeJS-MySQL int
                         the back end. We also developed a price prediction module in Python. The project included tools to manage the interaction with leads and current customers that helped traders to give the most appropriate next steps in the interaction
-                        towards the close of a sale. </p>
+                        towards the close of a sale. </p>-->
                 </div>
             </div>
             <div class="site-experience__container site-experience--left">
                 <div class="site-experience__content ace">
-                    <h2>October 2018 to April 2020</h2>
+                    <h3>October 2018 to April 2020</h3>
                     <h2>Full-Stack Web Developer </h2>
-                    <p>Contributed on the development of an inventory management application MongoDB-Express-React-Node (MERN) based. Leaded the implementation of SAP Business One ERP. Developed a HR recruitment tool in C# WPF and SQLServer.</p>
+                    <!--<p>Contributed on the development of an inventory management application MongoDB-Express-React-Node (MERN) based. Leaded the implementation of SAP Business One ERP. Developed a HR recruitment tool in C# WPF and SQLServer.</p>-->
                 </div>
             </div>
         </div>
     </section>
-    <dsectioniv class="site-education" matching-link="#education-link">
+    <section class="site-education" matching-link="#education-link">
+        <div class="grids">
+            <div class="card-one">
+                <div class="card">
+                    <div class="card__side card__side--front" id="front-1">
+                        <div class="text-box">
+                            <h3 class="text-box-top">2000 - 2005</h3>
+                            <h1 class="text-box-middle">Bachelor in Computer Systems for Business</h1>
+                            <h3 class="text-box-top">Instituto Tecnológico y de Estudios Superiores de Monterrey</h3>
+                            <h3 class="text-box-lower">--- Mexico City ---</h3>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back" id="back-1">
+                        <div class="text-box">
 
-        </section>
-        <section class="site-skills" matching-link="#skills-link">
-
-        </section>
-        <section class="site-projects" matching-link="#projects-link">
-
-        </section>
-        <section class="site-contact" matching-link="#contact-link">
-
-        </section>
-        <footer class="site-footer">
-            <div class="wrapper">
-                <p><span class="site-footer__text">Copyright &copy; 2020 Edgar Nava. All rights reserved.</span> <a href="#" class="btn btn--orange open-modal">Get in Touch</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+            <div class="card-two">
+                <div class="card">
+                    <div class="card__side card__side--front" id="front-2">
+                        <div class="text-box">
+                            <h3 class="text-box-top">2004</h3>
+                            <h1 class="text-box-middle">Artificial Intelligence Program</h1>
+                            <h3 class="text-box-top">Swinburne University of Technology</h3>
+                            <h3 class="text-box-lower">--- Melbourne, Australia ---</h3>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back" id="back-2">
+                        <div class="text-box">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-three">
+                <div class="card">
+                    <div class="card__side card__side--front" id="front-3">
+                        <div class="text-box">
+                            <h3 class="text-box-top">2008 - 2009</h3>
+                            <h1 class="text-box-middle">Master of Management</h1>
+                            <h3 class="text-box-top">Macquarie Graduate School of Management</h3>
+                            <h3 class="text-box-lower">--- Sydney, Australia ---</h3>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back" id="back-3">
+                        <div class="text-box">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="site-skills" matching-link="#skills-link">
+        <p>HTML</p>
+        <div class="container">
+            <div class="skills html">90%</div>
+        </div>
+
+        <p>CSS</p>
+        <div class="container">
+            <div class="skills css">80%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="container">
+            <div class="skills js">65%</div>
+        </div>
+
+        <p>PHP</p>
+        <div class="container">
+            <div class="skills php">60%</div>
+        </div>
+    </section>
+    <section class="site-projects" matching-link="#projects-link">
+
+    </section>
+    <section class="site-contact" matching-link="#contact-link">
+
+    </section>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p><span class="site-footer__text">Copyright &copy; 2020 Edgar Nava. All rights reserved.</span> <a href="#" class="btn btn--orange open-modal">Get in Touch</a></p>
+        </div>
+    </footer>
 </body>
 
 </html>

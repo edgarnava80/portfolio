@@ -1,4 +1,5 @@
 /*  COLORS */
+
 $color-one: #43e7a9;
 $color-one-light: #79ffcc;
 $color-one-dark: #3b896b;
@@ -13,15 +14,18 @@ $color-black: #000;
 $color-grey: #737373;
 $color-grey-light: #717C78;
 $color-grey-dark: #4B5350;
+
 /* BACKGROUND IMAGE */
 
+
 /*  FONT */
+
 $default-size: 1.4rem;
-$font-big: "Neue Montreal",
-sans-serif;
-$font-main: "Playfair Display",
-sans-serif;
+$font-big: "Neue Montreal";
+$font-main: "Playfair Display";
+
 /*  GRID */
+
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
