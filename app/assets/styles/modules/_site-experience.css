@@ -1,26 +1,26 @@
 .site-experience {
-    height: 150vh;
+    height: 100vh;
     position: relative;
-    background-color: $color-one-light;
+    background: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9));
     /* The actual timeline (the vertical ruler) */
     &__timeline {
         position: relative;
-        max-width: 1400px;
+        width: 100%;
         margin: 0 auto;
     }
     &__timeline::after {
         content: '';
         position: absolute;
-        width: 6px;
+        width: .5rem;
         background-color: white;
         top: 0;
         bottom: 0;
         left: 50%;
-        margin-left: -3px;
+        margin-left: -2px;
     }
     /* Container around content */
     &__container {
-        padding: 10px 40px;
+        padding: 1.5rem 4rem;
         position: relative;
         background-color: inherit;
         width: 50%;
@@ -29,12 +29,12 @@
     &__container::after {
         content: '';
         position: absolute;
-        width: 25px;
-        height: 25px;
-        right: -12px;
-        background-color: white;
-        border: 4px solid #FF9F55;
-        top: 15px;
+        width: 2rem;
+        height: 2rem;
+        right: -1rem;
+        background-color: $color-one;
+        border: .4rem solid $color-two;
+        top: 2rem;
         border-radius: 50%;
         z-index: 1;
     }
@@ -51,10 +51,10 @@
         content: " ";
         height: 0;
         position: absolute;
-        top: 22px;
+        top: 2rem;
         width: 0;
         z-index: 1;
-        right: 30px;
+        right: 3rem;
         border: medium solid white;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent white;
@@ -64,17 +64,17 @@
         content: " ";
         height: 0;
         position: absolute;
-        top: 22px;
+        top: 2rem;
         width: 0;
         z-index: 1;
-        left: 30px;
+        left: 3rem;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
     }
     /* Fix the circle for containers on the right side */
     &--right::after {
-        left: -12px;
+        left: -1rem;
     }
     /* The actual content */
     &__content {
