@@ -8,8 +8,8 @@
 
 <body>
     <div class="page-header">
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+        <div class="page-header__progress-container">
+            <div class="page-header__progress-bar" id="myBar"></div>
         </div>
         <h1 class="page-header__text"></h1>
     </div>
@@ -180,11 +180,36 @@
             <progress max="100" value="80" class="html5"> </progress>
         </div>
     </section>
-    <section class="site-projects" matching-link="#projects-link">
+    <section class="site-portfolio" matching-link="#portfolio-link">
+        <div class="site-portfolio__citm">
+            <div class="site-portfolio__citm__image">
 
+            </div>
+            <div class="site-portfolio__citm__details">
+                <h3 class="site-portfolio__citm__details--item">Coffee in the morning</h3>
+                <h3 class="site-portfolio__citm__details--item">Film's website</h3>
+                <h3 class="site-portfolio__citm__details--item">June 2020</h3>
+                <h3 class="site-portfolio__citm__details--item">HTML - CSS - JavaScript</h3>
+                <h3 class="site-portfolio__citm__details--item"><a href="http://www.rojoytostado.com" target="_blank">www.rojoytostado.com</a></h3>
+                <h3 class="site-portfolio__citm__details--item"><a href="https://github.com/edgarnava80/citm" target="_blank">GitHub repository</a></h3>
+            </div>
+        </div>
     </section>
     <section class="site-contact" matching-link="#contact-link">
-
+        <div class="site-contact__container">
+            <h1 class="site-contact__title">Let's get in touch!</h1>
+            <h4 class="site-contact__email">edgarnr@outlook.com</h4>
+            <hr>
+            <form class="site-contact__form" action="mailto:edgarnr@outlook.com" method="POST" enctype="text/plain">
+                <label for="">Your name:</label>
+                <input type="text" name="yourName"><br>
+                <label for="">Your email:</label>
+                <input type="email" name="yourEmail"><br>
+                <label for="">Your message:</label>
+                <textarea name="yourMessage" id="" cols="30" rows="10"></textarea>
+                <input type="submit">
+            </form>
+        </div>
     </section>
     <footer class="site-footer">
         <div class="wrapper">

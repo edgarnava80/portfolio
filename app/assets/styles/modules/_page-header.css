@@ -28,6 +28,18 @@
             font-size: 3rem;
         }
     }
+    /* The progress container (grey background) */
+    &__progress-container {
+        width: 100%;
+        height: .6rem;
+        background: #ccc;
+    }
+    /* The progress bar (scroll indicator) */
+    &__progress-bar {
+        height: .6rem;
+        background: linear-gradient(to right bottom, rgba($color-one-light, .9), rgba($color-two-light, .9));
+        width: 0%;
+    }
 }
 
 .is-shown {
@@ -37,22 +49,4 @@
 .odd-style {
     background-color: $color-two-light;
     color: $color-one-dark;
-}
-
-
-/* The progress container (grey background) */
-
-.progress-container {
-    width: 100%;
-    height: .5rem;
-    background: $color-grey-light;
-}
-
-
-/* The progress bar (scroll indicator) */
-
-.progress-bar {
-    height: .5rem;
-    background: $color-three;
-    width: 0%;
 }

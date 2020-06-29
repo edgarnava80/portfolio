@@ -2,6 +2,7 @@
     height: 100vh;
     position: relative;
     background: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9));
+    background-attachment: fixed;
     /* The actual timeline (the vertical ruler) */
     &__timeline {
         position: relative;
