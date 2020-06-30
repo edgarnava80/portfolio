@@ -1,19 +1,24 @@
 .page-header {
     display: inline-block;
     width: 100vw;
-    height: 2rem;
+    height: 3rem;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    background-color: $color-one-light;
+    background-color: rgba($color-one-light, .6);
     color: $color-two-dark;
+    font-size: 1.2rem;
     opacity: 0;
     transition: opacity 1s ease;
     @mixin atSmall {
-        //width: 30%;
         height: 4rem;
+        font-size: 1.5rem;
+    }
+    @mixin atLarge {
+        height: 4.5rem;
+        font-size: 2rem;
     }
     &__text {
         font-size: 1rem;
@@ -42,6 +47,41 @@
     }
 }
 
+.primary-nav {
+    float: right;
+    ul {
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+    }
+    li {
+        list-style: none;
+        float: left;
+        padding-right: 2rem;
+        padding-top: 0.2rem;
+        @mixin atSmall {
+            padding-right: 2rem;
+            padding-top: .5rem;
+        }
+        @mixin atMedium {
+            padding-right: 3rem;
+            padding-top: .5rem;
+        }
+        @mixin atLarge {
+            padding-right: 5rem;
+            padding-top: .5rem;
+        }
+        @mixin atLarger {
+            padding-right: 7rem;
+            padding-top: .5rem;
+        }
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
 .is-shown {
     opacity: 1;
 }
@@ -49,4 +89,11 @@
 .odd-style {
     background-color: $color-two-light;
     color: $color-one-dark;
+}
+
+.highlighted {
+    background-color: rgba($color-white, .8);
+    font-weight: bolder;
+    color: $color-grey-dark;
+    padding: 1rem;
 }

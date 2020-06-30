@@ -4,16 +4,28 @@
     }
     
     .stat-container {
-        width: 60%;
+        width: 100%;
         margin: 10rem auto;
         background: rgba(22, 26, 33, 0.1);
         backdrop-filter: blur(40px);
         position: relative;
-        @mixin atSmall {}
+        @mixin atSmall {
+            width: 80%;
+        }
+        @mixin atMedium {
+            width: 70%;
+        }
+        @mixin atLarge {
+            width: 60%;
+        }
+        @mixin atLarger {
+            width: 50%;
+        }
     }
     
     .label-wrapper {
         display: flex;
+        padding: .5rem;
     }
     
     .stat-name {

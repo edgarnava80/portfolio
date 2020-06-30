@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Edgar Nava personal portfolio.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/enr.ico" type="image/x-icon">
+    <title>Edgar Nava (Portfolio) {Full-Stack Web Developer}</title>
 </head>
 
 <body>
@@ -11,7 +13,18 @@
         <div class="page-header__progress-container">
             <div class="page-header__progress-bar" id="myBar"></div>
         </div>
-        <h1 class="page-header__text"></h1>
+        <nav class="primary-nav">
+            <ul>
+                <li><a class="primary-nav--item page-home" href="#home">Home</a></li>
+                <li><a class="primary-nav--item page-about" href="#about">About</a></li>
+                <li><a class="primary-nav--item page-experience" href="#experience">Experience</a></li>
+                <li><a class="primary-nav--item page-education" href="#education">Education</a></li>
+                <li><a class="primary-nav--item page-skills" href="#skills">Skills</a></li>
+                <li><a class="primary-nav--item page-portfolio" href="#portfolio">Portfolio</a></li>
+                <li><a class="primary-nav--item page-contact" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--<h1 class="page-header__text"></h1>-->
     </div>
     <div class="static-letters static-letters__e">
         <h1>e</h1>
@@ -19,7 +32,7 @@
     <div class="static-letters static-letters__n">
         <h1>n</h1>
     </div>
-    <header class="site-home" matching-link="#home-link">
+    <header class="site-home" id="home" matching-link="#home-link">
         <div class="site-home__big-title">
             <h1>edgar nava ramirez</h1>
         </div>
@@ -27,7 +40,7 @@
             <h2>| software development</h2>
         </div>
     </header>
-    <section class="site-about" matching-link="#about-link">
+    <section class="site-about" id="about" matching-link="#about-link">
         <div class="site-about__pic">
 
         </div>
@@ -40,7 +53,7 @@
         </div>
 
     </section>
-    <section class="site-experience" matching-link="#experience-link">
+    <section class="site-experience" id="experience" matching-link="#experience-link">
         <div class="site-experience__timeline">
             <div class="site-experience__container site-experience--left">
                 <div class="site-experience__content baz">
@@ -85,7 +98,7 @@
             </div>
         </div>
     </section>
-    <section class="site-education" matching-link="#education-link">
+    <section class="site-education" id="education" matching-link="#education-link">
         <div class="grids">
             <div class="card-one">
                 <div class="card">
@@ -140,14 +153,15 @@
             </div>
         </div>
     </section>
-    <section class="site-skills" matching-link="#skills-link">
+    <section class="site-skills" id="skills" matching-link="#skills-link">
         <div class='stat-container'>
             <!-- HTML -->
             <div class='label-wrapper'>
                 <p class='stat-name'>HTML</p>
                 <p class='stat-unit'></p>
+                <progress max="100" value="98" class="html5"> </progress>
             </div>
-            <progress max="100" value="98" class="html5"> </progress>
+
             <!-- CSS -->
             <div class='label-wrapper'>
                 <p class='stat-name'>CSS</p>
@@ -180,7 +194,7 @@
             <progress max="100" value="80" class="html5"> </progress>
         </div>
     </section>
-    <section class="site-portfolio" matching-link="#portfolio-link">
+    <section class="site-portfolio" id="portfolio" matching-link="#portfolio-link">
         <div class="site-portfolio__citm">
             <div class="site-portfolio__citm__image">
 
@@ -195,12 +209,12 @@
             </div>
         </div>
     </section>
-    <section class="site-contact" matching-link="#contact-link">
+    <section class="site-contact" id="contact" matching-link="#contact-link">
         <div class="site-contact__container">
+            <img class="site-contact__drawing" src="./assets/images/enr-draw1.jpg" alt="Edgar Nava's drawing.">
             <h1 class="site-contact__title">Let's get in touch!</h1>
             <h4 class="site-contact__email">edgarnr@outlook.com</h4>
-            <hr>
-            <form class="site-contact__form" action="mailto:edgarnr@outlook.com" method="POST" enctype="text/plain">
+            <!--<form class="site-contact__form" action="mailto:edgarnr@outlook.com" method="POST" enctype="text/plain">
                 <label for="">Your name:</label>
                 <input type="text" name="yourName"><br>
                 <label for="">Your email:</label>
@@ -208,7 +222,7 @@
                 <label for="">Your message:</label>
                 <textarea name="yourMessage" id="" cols="30" rows="10"></textarea>
                 <input type="submit">
-            </form>
+            </form>-->
         </div>
     </section>
     <footer class="site-footer">

@@ -3,6 +3,9 @@
     position: relative;
     background: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9));
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* The actual timeline (the vertical ruler) */
     &__timeline {
         position: relative;
@@ -122,7 +125,7 @@
     /* Make sure all circles are at the same spot */
     .site-experience--left::after,
     .site-experience--right::after {
-        left: 15px;
+        left: 2.1rem;
     }
     /* Make all right containers behave like the left ones */
     .site-experience--right {

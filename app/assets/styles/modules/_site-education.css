@@ -1,10 +1,13 @@
 .site-education {
-    height: 150vh;
+    height: 100vh;
     position: relative;
 }
 
 .grids {
-    //max-width: 136rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     margin: 0 auto;
     padding-top: 5rem;
@@ -16,10 +19,13 @@
         width: 90%;
     }
     @mixin atMedium {
-        width: 80%;
+        width: 75%;
     }
     @mixin atLarge {
-        width: 70%;
+        width: 65%;
+    }
+    @mixin atLarger {
+        width: 50%;
     }
 }
 

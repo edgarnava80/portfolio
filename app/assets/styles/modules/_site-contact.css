@@ -1,0 +1,24 @@
+.site-contact {
+    height: 100vh;
+    position: relative;
+    &__container {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //background-color: black;
+        //color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__drawing {
+        width: 30rem;
+        height: aut;
+        border-radius: 30rem;
+        margin-bottom: 5rem;
+    }
+}

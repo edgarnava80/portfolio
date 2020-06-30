@@ -9,8 +9,9 @@ class ScrollManager {
             this.scrolledVertically = window.pageYOffset
             this.events()
                 // PARAMETERS DEFINED FOR EACH PARTICULAR WEBSITE
-            this.mainTitle = document.querySelector('.page-header')
-            this.mainTitleText = document.querySelector('.page-header__text')
+            this.currentPage = 0
+            this.pageHeader = document.querySelector('.page-header')
+            this.menuElements = document.querySelectorAll('.primary-nav--item')
         }
         // GLOBAL METHODS
     events() {
@@ -28,9 +29,10 @@ class ScrollManager {
     runOnScroll() {
         this.defineScrollDirection()
             //Methods to execute on scroll defined for each particular website
-        if (this.getCurrentTop() < 1.1) this.actionsHome()
-        if (this.getCurrentTop() > .5 && this.getCurrentTop() < 2.5) this.actionsAbout()
-        if (this.getCurrentTop() > 1.5 && this.getCurrentTop() < 3.5) this.actionsExperience()
+        this.headerHandler()
+            //if (this.getCurrentTop() < 1.1) this.actionsHome()
+            //if (this.getCurrentTop() > .5 && this.getCurrentTop() < 2.5) this.actionsAbout()
+            //if (this.getCurrentTop() > 1.5 && this.getCurrentTop() < 3.5) this.actionsExperience()
 
     }
 
@@ -43,19 +45,101 @@ class ScrollManager {
             this.scrolledVertically = window.pageYOffset
         }
         //METHODS DEFINED FOR EACH PARTICULAR WEBSITE
+        // Method to trigger the actions for the header
+    headerHandler() {
+            let scrollingPage = Math.floor(this.getCurrentTop())
+            console.log('scrollingPage: ' + scrollingPage)
+            switch (scrollingPage) {
+                case 0:
+                    if (this.currentPage > 0) {
+                        console.log('page 0: ')
+                        this.currentPage = 0
+                        this.pageHeader.classList.remove('is-shown')
+                    }
+                    break
+                case 1:
+                    if (this.currentPage != 1) {
+                        console.log('page about: ')
+                        const text = document.querySelector('.page-about')
+                        this.currentPage = 1
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 2:
+                    if (this.currentPage != 2) {
+                        console.log('page about: ')
+                        const text = document.querySelector('.page-about')
+                        this.currentPage = 2
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 3:
+                    if (this.currentPage != 3) {
+                        console.log('page exp: ')
+                        const text = document.querySelector('.page-experience')
+                        this.currentPage = 3
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 4:
+                    if (this.currentPage != 4) {
+                        const text = document.querySelector('.page-education')
+                        this.currentPage = 4
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 5:
+                    if (this.currentPage != 5) {
+                        const text = document.querySelector('.page-skills')
+                        this.currentPage = 5
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 6:
+                    if (this.currentPage != 6) {
+                        const text = document.querySelector('.page-portfolio')
+                        this.currentPage = 6
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                case 7:
+                    if (this.currentPage != 7) {
+                        const text = document.querySelector('.page-contact')
+                        this.currentPage = 7
+                        this.pageHeader.classList.add('is-shown')
+                        this.menuElements.forEach(element => element.classList.remove('highlighted'))
+                        text.classList.add('highlighted')
+                    }
+                    break
+                default:
+                    break
+            }
+        }
         // Method to trigger the actions on page home
     actionsHome() {
             //console.log('actions home: ' + this.getCurrentTop())
-            this.getCurrentTop() < 1 ? this.mainTitle.classList.remove('is-shown') : this.mainTitle.classList.add('is-shown')
+            //this.getCurrentTop() < 1 ? this.mainTitle.classList.remove('is-shown') : this.mainTitle.classList.add('is-shown')
         }
         // Method to trigger the actions on page about
     actionsAbout() {
-        const text = document.querySelector('.site-about__text')
+        const text = document.querySelector('.page-about')
         let opacity = (this.getCurrentTop() * 2 - 1.2)
             // Set tilte text to "about"
-        if (this.scrollDirection == 'down' && this.getCurrentTop() == 1.10 || this.scrollDirection == 'up' && this.getCurrentTop() == 1.80) {
+        if (this.scrollMath.floor(this.getCurrentTop()) == 1) {
             this.mainTitle.classList.remove('odd-style')
-            this.mainTitleText.textContent = 'about'
+
         }
         if (this.getCurrentTop() >= 1.5) {
             //text.style.opacity = 1;
