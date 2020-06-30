@@ -1,11 +1,14 @@
     .site-skills {
-        height: 100vh;
+        height: 95vh;
         position: relative;
     }
     
     .stat-container {
+        position: absolute;
         width: 100%;
-        margin: 10rem auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: rgba(22, 26, 33, 0.1);
         backdrop-filter: blur(40px);
         position: relative;
@@ -25,7 +28,7 @@
     
     .label-wrapper {
         display: flex;
-        padding: .5rem;
+        padding: .2rem;
     }
     
     .stat-name {

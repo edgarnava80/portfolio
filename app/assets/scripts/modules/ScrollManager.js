@@ -63,8 +63,10 @@ class ScrollManager {
                         const text = document.querySelector('.page-about')
                         this.currentPage = 1
                         this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
+
                     }
                     break
                 case 2:
@@ -72,7 +74,7 @@ class ScrollManager {
                         console.log('page about: ')
                         const text = document.querySelector('.page-about')
                         this.currentPage = 2
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }
@@ -82,7 +84,7 @@ class ScrollManager {
                         console.log('page exp: ')
                         const text = document.querySelector('.page-experience')
                         this.currentPage = 3
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }
@@ -91,7 +93,7 @@ class ScrollManager {
                     if (this.currentPage != 4) {
                         const text = document.querySelector('.page-education')
                         this.currentPage = 4
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }
@@ -100,7 +102,7 @@ class ScrollManager {
                     if (this.currentPage != 5) {
                         const text = document.querySelector('.page-skills')
                         this.currentPage = 5
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }
@@ -109,7 +111,7 @@ class ScrollManager {
                     if (this.currentPage != 6) {
                         const text = document.querySelector('.page-portfolio')
                         this.currentPage = 6
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }
@@ -118,7 +120,7 @@ class ScrollManager {
                     if (this.currentPage != 7) {
                         const text = document.querySelector('.page-contact')
                         this.currentPage = 7
-                        this.pageHeader.classList.add('is-shown')
+                        this.pageHeader.classList.toggle('odd-style')
                         this.menuElements.forEach(element => element.classList.remove('highlighted'))
                         text.classList.add('highlighted')
                     }

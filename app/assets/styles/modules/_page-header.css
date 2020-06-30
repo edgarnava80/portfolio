@@ -7,7 +7,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-    background-color: rgba($color-one-light, .6);
+    background-color: $color-one-light;
     color: $color-two-dark;
     font-size: 1.2rem;
     opacity: 0;
@@ -94,6 +94,5 @@
 .highlighted {
     background-color: rgba($color-white, .8);
     font-weight: bolder;
-    color: $color-grey-dark;
-    padding: 1rem;
+    padding: .55rem 1.2rem;
 }

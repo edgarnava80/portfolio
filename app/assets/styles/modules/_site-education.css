@@ -1,5 +1,5 @@
 .site-education {
-    height: 100vh;
+    height: 105vh;
     position: relative;
 }
 
@@ -13,19 +13,22 @@
     padding-top: 5rem;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 3rem;
     grid-row-gap: 3rem;
     @mixin atSmall {
         width: 90%;
+        grid-row-gap: 1rem;
     }
     @mixin atMedium {
         width: 75%;
+        grid-row-gap: 2rem;
     }
     @mixin atLarge {
         width: 65%;
+        grid-row-gap: 2.5rem;
     }
     @mixin atLarger {
         width: 50%;
+        grid-row-gap: 3rem;
     }
 }
 
@@ -45,7 +48,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 25rem;
+    height: 18rem;
     width: 100%;
     transition: all ease-in-out 400ms;
     cursor: pointer;
@@ -66,7 +69,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25rem;
+    height: 18rem;
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
