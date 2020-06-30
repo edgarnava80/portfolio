@@ -1,6 +1,9 @@
     .site-skills {
         height: 95vh;
         position: relative;
+        background-image: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url('/assets/images/background-image.jpg');
+        background-size: cover;
+        background-attachment: fixed;
     }
     
     .stat-container {
@@ -9,7 +12,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: rgba(22, 26, 33, 0.1);
+        background: rgba(231, 233, 236, 0.1);
         backdrop-filter: blur(40px);
         position: relative;
         @mixin atSmall {

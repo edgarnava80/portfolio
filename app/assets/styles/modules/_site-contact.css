@@ -1,24 +1,31 @@
 .site-contact {
     height: 100vh;
     position: relative;
+    background: linear-gradient(rgba($color-one-light, .9), rgba($color-two-light, .9));
+    background-attachment: fixed;
     &__container {
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        //background-color: black;
+        transform: translate(-50%, -25%);
+        background-color: rgba(255, 255, 255, .6);
         //color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        //justify-content: center;
+        z-index: 2;
     }
     &__drawing {
-        width: 30rem;
-        height: aut;
-        border-radius: 30rem;
-        margin-bottom: 5rem;
+        border-radius: 100px;
+        overflow: hidden;
+        width: 200px;
+        height: 260px;
+        position: absolute;
+        top: -130px;
+        //margin-bottom: -130px;
+        border: .5rem solid rgba(255, 255, 255, .6);
     }
 }

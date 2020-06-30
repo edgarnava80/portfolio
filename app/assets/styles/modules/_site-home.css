@@ -1,6 +1,7 @@
 .site-home {
     height: 110vh;
     animation: backgroundImageHome 3s ease forwards;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
