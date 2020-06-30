@@ -3,17 +3,143 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="url" property="og:url" content="https://edgarnava.netlify.app">
+    <meta name="title" property="og:title" content="Edgar Nava (Portfolio) {Full-Stack Web Developer}">
+    <meta name="image" property="og:image" content="https://edgarnava.netlify.app/assets/images/enr-draw-high.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="706">
+    <meta property="og:image:height" content="941">
+    <meta property="og:site_name" content="Edgar Nava (Portfolio) {Full-Stack Web Developer}">
+    <meta property="og:image:alt" content="Edgar Nava image drawing.">
+    <meta name="author" content="Edgar Nava">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./assets/images/enr.ico" type="image/x-icon">
     <title>Edgar Nava (Portfolio) {Full-Stack Web Developer}</title>
+    <meta name="keywords" content="edgar nava, developer, software developer, full-stack, web developer, portfolio, personal website">
+    <meta name="description" property="og:description" content="Software development enthusiat with great passion for coding! More than 6 years of experience working in the construction of software tools in organizations.">
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            z-index: 500;
+            &--hide {
+                display: none;
+            }
+        }
+        
+        .box {
+            display: inline-block;
+            height: 400px;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .2s ease;
+        }
+        
+        .enr {
+            position: relative;
+            width: 150px;
+            height: 200px;
+            border-radius: 75px;
+            top: 0;
+            top: calc(10% - 10px);
+            left: 25%;
+            left: calc(50% - 75px);
+            background-image: url('./assets/images/enr-handwrite.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .loader3 {
+            position: relative;
+            width: 150px;
+            height: 20px;
+            top: 70%;
+            top: calc(25% - 10px);
+            left: 25%;
+            left: calc(50% - 75px);
+        }
+        
+        .loader3:after {
+            text-align: center;
+            content: "loading ...";
+            color: #ff7979;
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            left: 0;
+            top: 0;
+            background-color: #79ffcc;
+            z-index: 1;
+        }
+        
+        .loader3:before {
+            content: "";
+            position: absolute;
+            background-color: #ff7979;
+            top: -5px;
+            left: 0px;
+            height: 30px;
+            width: 0px;
+            z-index: 0;
+            opacity: 1;
+            transform-origin: 100% 0%;
+            animation: loader3 5s ease-in-out infinite;
+        }
+        
+        @keyframes loader3 {
+            0% {
+                width: 0px;
+            }
+            70% {
+                width: 100%;
+                opacity: 1;
+            }
+            90% {
+                opacity: 0;
+                width: 100%;
+            }
+            100% {
+                opacity: 0;
+                width: 0px;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => hideLoader());
+
+        function hideLoader() {
+            let loadScreen = document.querySelector(".loader-wrapper");
+            document.body.removeChild(loadScreen);
+        }
+    </script>
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <div class="box">
+            <div class="enr"></div>
+            <div class="loader3"></div>
+        </div>
+    </div>
+    <div class="cursor--one"></div>
+    <div class="cursor--two"></div>
+    <div class="cursor--three"></div>
     <div class="page-header">
         <div class="page-header__progress-container">
             <div class="page-header__progress-bar" id="myBar"></div>
         </div>
-        <nav class="primary-nav">
+        <nav class="primary-nav cursor-effect">
             <ul>
                 <li><a class="primary-nav--item page-home" href="#home">Home</a></li>
                 <li><a class="primary-nav--item page-about" href="#about">About</a></li>
@@ -34,7 +160,7 @@
     </div>
     <header class="site-home" id="home" matching-link="#home-link">
         <div class="site-home__big-title">
-            <h1>edgar nava ramirez</h1>
+            <h1>edgar nava</h1>
         </div>
         <div class="site-home__subtitle">
             <h2>| software development</h2>
@@ -215,23 +341,19 @@
                 <img src="./assets/images/enr-draw1.jpg" alt="Edgar Nava's drawing.">
             </div>
             <h1 class="site-contact__title">Let's get in touch!</h1>
-            <h3 class="site-contact__email">edgarnr@outlook.com</h3>
-            <!--<form class="site-contact__form" action="mailto:edgarnr@outlook.com" method="POST" enctype="text/plain">
-                <label for="">Your name:</label>
-                <input type="text" name="yourName"><br>
-                <label for="">Your email:</label>
-                <input type="email" name="yourEmail"><br>
-                <label for="">Your message:</label>
-                <textarea name="yourMessage" id="" cols="30" rows="10"></textarea>
-                <input type="submit">
-            </form>-->
+            <h3 class="site-contact__element">edgarnr@outlook.com</h3>
+            <div class="share__list">
+                <a class="share__item share__item--linkedin" target="_blank" href="https://www.linkedin.com/in/nava-edgar-softdev"><i class="fab fa-linkedin"></i></a>
+                <a class="share__item share__item--github" target="_blank" href="https://github.com/edgarnava80"><i class="fab fa-github-square"></i></a>
+            </div>
         </div>
     </section>
     <footer class="site-footer">
         <div class="wrapper">
-            <p><span class="site-footer__text">Copyright &copy; 2020 Edgar Nava. All rights reserved.</span> <a href="#" class="btn btn--orange open-modal">Get in Touch</a></p>
+            <p><small class="site-footer__text">Copyright &copy; 2020 Edgar Nava. All rights reserved.</small></p>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/1f4f0f3888.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

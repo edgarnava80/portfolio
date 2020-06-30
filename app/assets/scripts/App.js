@@ -1,7 +1,9 @@
 import '../styles/styles.css'
 import ScrollManager from './modules/ScrollManager'
+import Cursor from './modules/Cursor'
 
 new ScrollManager()
+new Cursor()
     // Flipping Cargs by Shahid Shaikh from CodePen.io
 var flipCheck = 0;
 

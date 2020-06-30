@@ -1,0 +1,56 @@
+.cursor {
+    &--one {
+        visibility: hidden;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid $color-one;
+        //border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 100;
+        transition-duration: 400ms;
+        transition-timing-function: ease-out;
+        @mixin atSmall {
+            visibility: visible;
+        }
+    }
+    &--two {
+        visibility: hidden;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid $color-two;
+        transform: rotate(45deg);
+        //border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 100;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        @mixin atSmall {
+            visibility: visible;
+        }
+    }
+    &--three {
+        visibility: hidden;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid $color-grey-light;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        z-index: 1000;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+        backdrop-filter: invert(1);
+        @mixin atSmall {
+            visibility: visible;
+        }
+    }
+    &--rotate-right {
+        animation: rotateRight 200ms infinite;
+    }
+    &--rotate-left {
+        transform: scale(.7);
+        animation: rotateRight 200ms infinite;
+    }
+}
