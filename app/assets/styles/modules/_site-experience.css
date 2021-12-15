@@ -172,3 +172,11 @@
     background-position: center;
     background-size: contain;
 }
+
+.vwfs {
+    background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url('./assets/images/vwfs-img.jpg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
